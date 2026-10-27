@@ -1,5 +1,5 @@
 {% set name = "pydeb" %}
-{% set version = "0.10.2" %}
+{% set version = "0.10.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/jornbr/{{ name }}/releases/download/v{{ version }}/{{ name }}.tar.gz
-  sha256: e6d64670e33fd3879b17cb4401157322c7fbe14d614521f3a751ba65004ca429
+  sha256: 4624c1ea21687cf808ccb8b5dd29d4ae371d611d8cd0c77b0feba1cfe739c93d
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
   entry_points:
     - pydeb = pydeb.__main__:main
 
